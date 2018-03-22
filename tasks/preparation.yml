@@ -1,7 +1,7 @@
 ---
 - name: Ensure installation path with project folder exists
   file:
-      path: "{{ installation_path }}{{ project }}"
+      path: "{{ installation_path }}{{ project_name }}"
       state: directory
 
 - name: Ensure download directory exists
