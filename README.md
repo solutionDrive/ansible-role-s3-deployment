@@ -12,7 +12,7 @@ Role Variables
 --------------
 
     project_name: 'project'
-The project_name will be used for the full installtion_path
+The project_name will be used for the full installation_path
 
     installation_path: '/var/www/'
 Installation path which will hold the project name directories
