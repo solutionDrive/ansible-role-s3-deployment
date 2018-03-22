@@ -11,7 +11,32 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+    project_name: 'project'
+The project_name will be used for the full installtion_path
+
+    installation_path: '/var/www/'
+Installation path which will hold the project name directories
+
+    download_destination_path: '/tmp/'
+Destination path to store the archive temporary
+
+    download_destination_file: "{{ download_destination_path }}release.tar.gz"
+Filename to use for storing the archive
+
+    owner: 'www-data'
+Owner which will be set to the files/folders in the installation_path/project_name folder
+
+    group: 'www-data'
+Group which will be set to the files/folders in the installation_path/project_name folder
+
+    s3_bucket: ''
+Bucket which should be used
+
+    s3_object: ''
+Object which should be downloaded from the bucket
+    
+    aws_region: 'eu-central-1'
+Region in which the bucket is available
 
 Dependencies
 ------------

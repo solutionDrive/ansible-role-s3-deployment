@@ -1,2 +1,3 @@
 ---
-# tasks file for solutiondrive.s3-deployment
+- include: preparation.yml
+- include: setup.yml

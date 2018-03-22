@@ -1,0 +1,26 @@
+---
+- name: Download archive from S3
+  s3:
+    bucket: "{{ s3_bucket }}"
+    object: "{{ s3_object }}"
+    dest: "{{ download_destination_file }}"
+    region: "{{ aws_region }}"
+    mode: get
+
+- name: Unarchive archive to installation path
+  unarchive:
+    src: "{{ download_destination_file }}"
+    dest: "{{ installation_path }}{{ project }}"
+    remote_src: yes
+
+- name: Remove downloaded archive
+  file:
+    path: "{{ download_destination_file }}"
+    state: absent
+
+- name: Set owner and group correctly in installation path
+  file:
+    path: "{{ installation_path }}{{ project }}"
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+    recurse: true

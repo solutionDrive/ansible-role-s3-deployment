@@ -1,2 +1,11 @@
 ---
-# defaults file for solutiondrive.s3-deployment
+project_name: 'project'
+installation_path: '/var/www/'
+download_destination_path: '/tmp/'
+download_destination_file: "{{ download_destination_path }}release.tar.gz"
+owner: 'www-data'
+group: 'www-data'
+
+s3_bucket: ''
+s3_object: ''
+aws_region: 'eu-central-1'
