@@ -10,7 +10,7 @@
 - name: Unarchive archive to installation path
   unarchive:
     src: "{{ download_destination_file }}"
-    dest: "{{ installation_path }}{{ project }}"
+    dest: "{{ installation_path }}{{ project_name }}"
     remote_src: yes
 
 - name: Remove downloaded archive
@@ -20,7 +20,7 @@
 
 - name: Set owner and group correctly in installation path
   file:
-    path: "{{ installation_path }}{{ project }}"
+    path: "{{ installation_path }}{{ project_name }}"
     owner: "{{ owner }}"
     group: "{{ group }}"
     recurse: true
