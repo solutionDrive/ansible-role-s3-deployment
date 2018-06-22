@@ -1,6 +1,6 @@
 ---
 - name: Download archive from S3
-  s3:
+  aws_s3:
     bucket: "{{ s3_bucket }}"
     object: "{{ s3_object }}"
     dest: "{{ download_destination_file }}"
