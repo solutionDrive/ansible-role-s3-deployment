@@ -13,5 +13,9 @@
         - boto3
         - botocore
 
-  roles:
-    - role_under_test
+  tasks:
+    - include_role:
+        name: role_under_test
+      vars:
+        s3_bucket: build-tools.cloud.solutiondrive.de
+        s3_object: /phar/behat-standalone.php7.2.phar

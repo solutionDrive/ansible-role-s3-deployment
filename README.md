@@ -47,8 +47,12 @@ Example Playbook
 ----------------
 
     - hosts: servers
-      roles:
-         - { role: solutionDrive.s3_deployment }
+      tasks:
+        - include_role:
+            name: solutionDrive.s3_deployment
+          vars:
+            s3_bucket: 's3_bucket_name'
+            s3_object: 'path/in/s3/bucket'
 
 Maintainer
 ----------
