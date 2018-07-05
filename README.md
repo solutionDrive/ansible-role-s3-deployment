@@ -6,7 +6,7 @@ Role to get archives from S3 to deploy them to a specific folder
 Requirements
 ------------
 
-boto - to be able to communicate with S3
+boto/boto3 - to be able to communicate with S3
 
 Role Variables
 --------------
