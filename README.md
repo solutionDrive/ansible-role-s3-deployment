@@ -48,7 +48,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: solutiondrive.s3-deployment }
+         - { role: solutionDrive.s3_deployment }
 
 Maintainer
 ----------
